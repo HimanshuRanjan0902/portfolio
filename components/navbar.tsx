@@ -76,9 +76,9 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="ghost" size="icon">
-                <Github className="h-5 w-5" />
-              </Button>
+             <Button variant="ghost" className="h-10 w-10 p-0">
+  <Github className="h-5 w-5" />
+</Button>
             </a>
 
             <a

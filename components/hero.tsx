@@ -195,7 +195,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button variant="outline" className="px-8 py-6 text-lg">
+            <Button variant="ghost" className="px-8 py-6 text-lg">
               <Github className="mr-2 h-5 w-5" />
               GitHub
             </Button>
