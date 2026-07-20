@@ -115,10 +115,10 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section
-      id="top"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
-    >
+<section
+  id="top"
+  className="relative min-h-screen pt-32 lg:pt-40 ..."
+>
       {/* Background Blur */}
       <div className="absolute -top-32 left-10 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl" />
       <div className="absolute bottom-0 right-10 h-96 w-96 rounded-full bg-violet-500/20 blur-3xl" />
