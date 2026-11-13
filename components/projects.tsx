@@ -14,7 +14,7 @@ export function Projects() {
             <p className="section-kicker">04 / Selected work</p>
             <h2 className="section-heading mt-5">Featured <span>Work</span></h2>
           </div>
-          <p className="max-w-md text-sm leading-7 text-zinc-400">A selection of applications I have designed and developed, spanning market insights and food ordering experiences.</p>
+          <p className="max-w-md text-sm leading-7 text-zinc-400">A selection of full-stack applications I have designed and developed, from market insights and link management to food ordering experiences.</p>
         </div>
         <div className="grid gap-8">
           {projects.map((project, index) => (

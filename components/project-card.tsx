@@ -50,7 +50,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               </div>
             </div>
           </div>
-        ) : (
+        ) : project.slug === "stocksense-ai" ? (
           <div className="relative w-full max-w-xl rounded-xl border border-white/10 bg-[#0a0b12]/90 p-4 shadow-[0_25px_100px_rgba(0,0,0,.55)] backdrop-blur-xl sm:p-6">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div><p className="text-[10px] uppercase tracking-[0.24em] text-zinc-500">StockSense AI / Market overview</p><p className="mt-1 text-sm font-semibold text-white">Market dashboard</p></div>
@@ -65,8 +65,21 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </div>
             <div className="mt-4 flex flex-wrap gap-2"><span className="inline-flex items-center gap-1 rounded-md bg-violet-400/10 px-2 py-1 text-[9px] text-violet-200"><Eye size={10}/> Watchlist</span><span className="inline-flex items-center gap-1 rounded-md bg-fuchsia-400/10 px-2 py-1 text-[9px] text-fuchsia-200"><Wallet size={10}/> Virtual portfolio</span></div>
           </div>
+        ) : (
+          <div className="relative w-full max-w-xl rounded-xl border border-white/10 bg-[#0c1020]/95 p-5 shadow-[0_25px_100px_rgba(0,0,0,.55)] sm:p-7">
+            <div className="flex items-center justify-between border-b border-white/10 pb-4">
+              <div><p className="font-display text-lg font-bold text-white">LinkLite<span className="text-cyan-300">.</span></p><p className="mt-1 text-[10px] text-zinc-400">Make every link count</p></div>
+              <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-[10px] text-emerald-300">Dashboard</span>
+            </div>
+            <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.04] p-4">
+              <p className="text-xs font-semibold text-white">Create a short link</p>
+              <div className="mt-3 rounded-lg border border-white/10 bg-black/20 px-3 py-3 text-[10px] text-zinc-500">https://your-long-url.com/goes-here</div>
+              <div className="mt-3 flex items-center justify-between gap-3"><span className="text-[10px] text-zinc-400">Custom alias · Expiration</span><span className="rounded-md bg-violet-500 px-3 py-2 text-[10px] font-semibold text-white">Shorten URL ↗</span></div>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-3"><div className="rounded-lg border border-white/10 bg-white/[0.035] p-3"><p className="text-[9px] text-zinc-500">TOTAL LINKS</p><p className="mt-2 text-2xl font-semibold text-white">12</p></div><div className="rounded-lg border border-white/10 bg-white/[0.035] p-3"><p className="text-[9px] text-zinc-500">TOTAL CLICKS</p><p className="mt-2 text-2xl font-semibold text-white">248</p></div></div>
+          </div>
         )}
-        <div className="absolute bottom-5 left-6 font-mono text-[10px] tracking-[0.22em] text-white/35">{project.slug === "cravecraft" ? "02 — FOOD ORDERING PREVIEW" : "01 — MARKET DASHBOARD PREVIEW"}</div>
+        <div className="absolute bottom-5 left-6 font-mono text-[10px] tracking-[0.22em] text-white/35">{project.slug === "cravecraft" ? "02 — FOOD ORDERING PREVIEW" : project.slug === "stocksense-ai" ? "01 — MARKET DASHBOARD PREVIEW" : "03 — LINK MANAGEMENT PREVIEW"}</div>
       </div>
 
       <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14">
