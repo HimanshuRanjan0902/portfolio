@@ -50,3 +50,34 @@ The hero now includes a Three.js scene (`@react-three/fiber` + `@react-three/dre
 - Editable in `components/three/scene.tsx` (colors, distort amount, particle count) and `components/three-hero.tsx` (enable/disable logic)
 
 
+
+
+## Featured project
+
+**StockSense AI** — a responsive stock market and paper-trading platform featuring Angel One SmartAPI live market data, watchlists, portfolio tracking, and virtual-money-only paper trading.
+
+Live application: https://stocksense-ai-delta.vercel.app
+
+
+## Design update
+
+The portfolio layout has been refreshed using the uploaded reference as visual inspiration: a dark editorial layout, purple ambient lighting, asymmetric hero section, compact navigation, capability cards, journey timeline, and a featured project presentation. The implementation remains in the existing Next.js application; it does not depend on the reference project's paid GSAP trial plugin or its encrypted 3D character asset.
+
+The featured project list contains StockSense AI only. The paper-trading feature is simulation-only and does not execute real trades.
+
+## Featured projects
+
+- **StockSense AI** — stock market dashboard with Angel One SmartAPI live market data, watchlists, portfolio tracking, and simulation-only paper trading.
+- **CraveCraft** — food ordering web app with menu browsing, cart management, and order placement. Frontend: https://cravecraft-three.vercel.app
+
+LinkedIn: https://www.linkedin.com/in/himanshu-ranjan3/
+
+
+## CraveCraft case study
+
+- Live website: https://cravecraft-three.vercel.app
+- GitHub repository: https://github.com/HimanshuRanjan0902/cravecraft
+- Case study route: `/projects/cravecraft`
+- Frontend hosting: Vercel
+- Backend hosting: Render
+- Database status: MongoDB is not connected; the API currently uses in-memory mode, so order data is not persisted across backend restarts.

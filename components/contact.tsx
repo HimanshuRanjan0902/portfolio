@@ -1,178 +1,54 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Mail,
-  Github,
-  Linkedin,
-  Send,
-  MapPin,
-} from "lucide-react";
+import { Github, Mail, ArrowUpRight, Linkedin } from "lucide-react";
 
 export function Contact() {
   return (
-    <section
-      id="contact"
-      className="relative py-24"
-    >
-      <div className="mx-auto max-w-7xl px-6">
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
-        >
-          <p className="text-cyan-400 font-semibold uppercase tracking-[0.25em]">
-            Contact
+    <section id="contact" className="mx-auto max-w-[1440px] px-6 py-28 lg:px-12 lg:py-36">
+      <div className="grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-end">
+        <motion.div initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <p className="section-kicker">05 / Get in touch</p>
+          <h2 className="section-heading mt-5 max-w-3xl">Have a project<br />in <span>mind?</span></h2>
+          <p className="mt-7 max-w-xl text-base leading-8 text-zinc-400">
+            I&apos;m open to entry-level software development roles, full-stack opportunities, and conversations about building useful products. Let&apos;s connect.
           </p>
-
-          <h2 className="mt-4 text-5xl font-bold">
-            Let's Build Something Amazing
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-2xl text-gray-400 leading-8">
-            I'm currently available for internships, freelance work,
-            and exciting software engineering opportunities.
-          </p>
+          <a href="mailto:himanshuranjan2213@gmail.com" className="reference-primary-link mt-9">
+            Say hello <ArrowUpRight size={17} />
+          </a>
         </motion.div>
 
-        <div className="grid gap-10 lg:grid-cols-2">
-
-          {/* Left */}
-
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-
-              <div className="flex items-center gap-4">
-
-                <Mail className="text-cyan-400" />
-
-                <div>
-                  <h3 className="font-semibold">
-                    Email
-                  </h3>
-
-                  <a
-                    href="mailto:himanshuranjan2213@gmail.com"
-                    className="text-gray-400 hover:text-cyan-400"
-                  >
-                    himanshuranjan2213@gmail.com
-                  </a>
-
-                </div>
-
-              </div>
-
-              <div className="mt-8 flex items-center gap-4">
-
-                <Github className="text-cyan-400" />
-
-                <div>
-
-                  <h3 className="font-semibold">
-                    GitHub
-                  </h3>
-
-                  <a
-                    href="https://github.com/HimanshuRanjan0902"
-                    target="_blank"
-                    className="text-gray-400 hover:text-cyan-400"
-                  >
-                    github.com/HimanshuRanjan0902
-                  </a>
-
-                </div>
-
-              </div>
-
-              <div className="mt-8 flex items-center gap-4">
-
-                <Linkedin className="text-cyan-400" />
-
-                <div>
-
-                  <h3 className="font-semibold">
-                    LinkedIn
-                  </h3>
-
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-cyan-400"
-                  >
-                    Add Your LinkedIn URL
-                  </a>
-
-                </div>
-
-              </div>
-
-              <div className="mt-8 flex items-center gap-4">
-
-                <MapPin className="text-cyan-400" />
-
-                <div>
-
-                  <h3 className="font-semibold">
-                    Location
-                  </h3>
-
-                  <p className="text-gray-400">
-                    Punjab, India
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </motion.div>
-
-          {/* Right */}
-
-          <motion.form
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="rounded-3xl border border-white/10 bg-white/5 p-8 space-y-5"
-          >
-
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full rounded-xl border border-white/10 bg-transparent p-4 outline-none focus:border-cyan-400"
-            />
-
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full rounded-xl border border-white/10 bg-transparent p-4 outline-none focus:border-cyan-400"
-            />
-
-            <textarea
-              rows={6}
-              placeholder="Your Message..."
-              className="w-full rounded-xl border border-white/10 bg-transparent p-4 outline-none focus:border-cyan-400"
-            />
-
-            <button
-              className="flex items-center gap-2 rounded-xl bg-cyan-500 px-8 py-4 font-semibold hover:bg-cyan-600 transition"
-            >
-              <Send size={18} />
-              Send Message
-            </button>
-
-          </motion.form>
-
-        </div>
-
+        <motion.div initial={{ opacity: 0, x: 25 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-2xl border border-white/10 bg-white/[0.025] p-7 sm:p-9">
+          <p className="text-xs uppercase tracking-[0.25em] text-zinc-500">Contact details</p>
+          <a href="mailto:himanshuranjan2213@gmail.com" className="contact-row group">
+            <span className="contact-icon"><Mail size={19} /></span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-xs text-zinc-500">Email</span>
+              <span className="mt-1 block break-all text-sm text-zinc-200 group-hover:text-fuchsia-300">himanshuranjan2213@gmail.com</span>
+            </span>
+            <ArrowUpRight size={17} className="text-zinc-500 transition group-hover:text-fuchsia-300" />
+          </a>
+          <a href="https://github.com/HimanshuRanjan0902" target="_blank" rel="noopener noreferrer" className="contact-row group">
+            <span className="contact-icon"><Github size={19} /></span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-xs text-zinc-500">GitHub</span>
+              <span className="mt-1 block text-sm text-zinc-200 group-hover:text-fuchsia-300">HimanshuRanjan0902</span>
+            </span>
+            <ArrowUpRight size={17} className="text-zinc-500 transition group-hover:text-fuchsia-300" />
+          </a>
+          <a href="https://www.linkedin.com/in/himanshu-ranjan3/" target="_blank" rel="noopener noreferrer" className="contact-row group">
+            <span className="contact-icon"><Linkedin size={19} /></span>
+            <span className="min-w-0 flex-1">
+              <span className="block text-xs text-zinc-500">LinkedIn</span>
+              <span className="mt-1 block text-sm text-zinc-200 group-hover:text-fuchsia-300">himanshu-ranjan3</span>
+            </span>
+            <ArrowUpRight size={17} className="text-zinc-500 transition group-hover:text-fuchsia-300" />
+          </a>
+          <div className="mt-8 border-t border-white/10 pt-6">
+            <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">Currently</p>
+            <p className="mt-2 text-sm text-zinc-300">Based in India · Open to work</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

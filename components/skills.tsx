@@ -81,20 +81,20 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="mx-auto max-w-7xl px-6 py-28"
+      className="mx-auto max-w-[1440px] px-6 py-28 lg:px-12 lg:py-36"
     >
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <p className="text-center uppercase tracking-[0.3em] text-cyan-400 font-semibold">
+        <p className="text-center uppercase tracking-[0.3em] text-fuchsia-300 font-semibold">
           Skills
         </p>
 
         <h2 className="mt-3 text-center text-4xl font-bold md:text-5xl">
           My
-          <span className="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-fuchsia-300 to-violet-500 bg-clip-text text-transparent">
             {" "}
             Technical Skills
           </span>
@@ -120,7 +120,7 @@ export function Skills() {
                   y: -8,
                   scale: 1.02,
                 }}
-                className="rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-xl"
+                className="rounded-3xl border border-white/10 bg-[#100d16]/80 p-7 backdrop-blur-xl"
               >
                 <div className="mb-8 flex items-center gap-4">
                   <div
@@ -139,7 +139,7 @@ export function Skills() {
                     <div key={skill.name}>
                       <div className="mb-2 flex justify-between text-sm">
                         <span>{skill.name}</span>
-                        <span>{skill.level}%</span>
+                        <span className="text-zinc-500"> </span>
                       </div>
 
                       <div className="h-2 overflow-hidden rounded-full bg-white/10">

@@ -121,6 +121,41 @@ export default async function ProjectPage({
             </ul>
           </section>
 
+          {project.workflow && (
+            <section>
+              <h2 className="font-display text-lg font-semibold">User journey</h2>
+              <ol className="mt-4 grid gap-3">
+                {project.workflow.map((step, i) => (
+                  <li
+                    key={step}
+                    className="glass flex items-start gap-3 rounded-2xl p-4 text-sm text-[var(--fg-muted)]"
+                  >
+                    <span className="font-mono text-xs text-aurora-cyan">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+
+          {project.implementationNotes && (
+            <section>
+              <h2 className="font-display text-lg font-semibold">Deployment & implementation</h2>
+              <ul className="mt-4 grid gap-3">
+                {project.implementationNotes.map((note) => (
+                  <li
+                    key={note}
+                    className="glass rounded-2xl p-4 text-sm leading-relaxed text-[var(--fg-muted)]"
+                  >
+                    {note}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           <section>
             <h2 className="font-display text-lg font-semibold">Tech stack</h2>
             <div className="mt-4 flex flex-wrap gap-2">

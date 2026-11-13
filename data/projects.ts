@@ -12,181 +12,87 @@ export type Project = {
   challenge: string;
   features: string[];
   techStack: string[];
-
+  workflow?: string[];
+  implementationNotes?: string[];
   featured?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    slug: "ai-finance-tracker",
-    title: "AI Personal Finance Tracker",
+    slug: "cravecraft",
+    title: "CraveCraft",
     description:
-      "A finance dashboard that categorizes spending automatically, forecasts monthly cash flow, and surfaces savings suggestions from transaction patterns using an AI-assisted pipeline.",
-    tags: ["Next.js", "Node.js", "MongoDB", "AI/LLM"],
-    gradient: "from-aurora-indigo to-aurora-cyan",
-    liveUrl: "",
-    repoUrl: "https://github.com/himanshuranjan/ai-finance-tracker",
-    year: "2025",
-    role: "Solo full-stack developer",
-    overview:
-      "A finance dashboard built to remove the manual work of expense tracking. Transactions are imported, automatically categorized, and turned into a monthly forecast so the user can see where their money is headed, not just where it's been.",
-    challenge:
-      "Bank and card exports come in inconsistent formats with messy merchant names. The core problem was building a categorization pipeline reliable enough to trust without constant manual correction, while keeping the dashboard fast as transaction history grew.",
-    features: [
-      "Automatic transaction categorization from raw statement data",
-      "Monthly cash-flow forecasting based on historical spending patterns",
-      "Personalized savings suggestions surfaced from spending trends",
-      "Interactive charts for category breakdowns and month-over-month trends",
-    ],
-    techStack: ["Next.js", "Node.js", "Express.js", "MongoDB", "OpenAI API", "Recharts"],
-  },
-  {
-    slug: "ecommerce-platform",
-    title: "E-Commerce Platform",
-    description:
-      "A full MERN storefront with cart, checkout, order tracking, and an admin console for inventory and sales, built on a REST API with role-based auth.",
-    tags: ["React", "Express.js", "MongoDB", "Node.js"],
-    gradient: "from-aurora-violet to-aurora-rose",
-    liveUrl: "",
-    repoUrl: "https://github.com/himanshuranjan/ecommerce-platform",
-    year: "2025",
-    role: "Solo full-stack developer",
-    overview:
-      "A complete online store covering the full purchase loop: browsing, cart, checkout, and order tracking, paired with an admin console for managing inventory and viewing sales.",
-    challenge:
-      "Keeping the customer-facing store and the admin console on one codebase without either slowing the other down, while making sure stock levels, orders, and payments stayed consistent under concurrent requests.",
-    features: [
-      "Product catalog with search, filtering, and category pages",
-      "Cart and multi-step checkout with order confirmation",
-      "Role-based auth separating customer and admin access",
-      "Admin dashboard for inventory, orders, and sales overview",
-    ],
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "JWT Auth", "Stripe"],
-  },
-  {
-    slug: "campus-lost-found",
-    title: "Campus Lost & Found",
-    description:
-      "A community reporting tool for university campuses where students post found or missing items, filter by location and category, and message finders directly.",
-    tags: ["Next.js", "MongoDB", "TypeScript"],
+      "A responsive food-ordering web application where users can explore the menu, add dishes to their bag, and place orders through a clean, modern interface.",
+    tags: ["React", "JavaScript", "Node.js", "Express.js", "Tailwind CSS"],
     gradient: "from-aurora-cyan to-aurora-indigo",
-    liveUrl: "",
-    repoUrl: "https://github.com/himanshuranjan/campus-lost-found",
-    year: "2024",
-    role: "Solo full-stack developer",
+    liveUrl: "https://cravecraft-three.vercel.app",
+    repoUrl: "https://github.com/HimanshuRanjan0902/cravecraft",
+    year: "2026",
+    role: "Full-Stack Developer",
     overview:
-      "Built for a university campus where lost items usually get posted across scattered WhatsApp groups. This centralizes reporting so found and missing items live in one searchable place.",
+      "CraveCraft is a responsive food-ordering web application. Customers can explore the menu, add dishes to their bag, review the cart, and place an order. The frontend is hosted on Vercel, while the Node.js/Express API runs as a separate service on Render.",
     challenge:
-      "Getting students to actually use a new tool instead of their group chats meant the reporting flow had to be faster than posting a photo to WhatsApp, while still capturing enough detail (location, category, timestamp) to make search useful.",
+      "The key implementation task was deploying the frontend and API independently and configuring the production frontend to call the hosted backend rather than localhost. This also involved resolving the browser's cross-origin (CORS) requirements for API requests.",
     features: [
-      "Post a found or missing item with photo, category, and location",
-      "Filterable feed by location, category, and date",
-      "Direct messaging between the reporter and the item owner",
-      "Status tracking so resolved items are marked and archived",
+      "Responsive food ordering interface",
+      "Food menu browsing and item selection",
+      "Shopping bag/cart management",
+      "Order placement confirmation",
+      "React frontend deployed on Vercel",
+      "Node.js and Express API deployed on Render",
+      "Production frontend-to-backend API configuration",
     ],
-    techStack: ["Next.js", "TypeScript", "MongoDB", "Node.js", "Tailwind CSS"],
+    techStack: ["React", "JavaScript", "Tailwind CSS", "Node.js", "Express.js", "Vercel", "Render"],
+    workflow: [
+      "Open the live storefront and browse the available food menu.",
+      "Choose dishes and add them to the shopping bag.",
+      "Review the bag and proceed through the order placement flow.",
+      "See the order confirmation in the interface after a successful submission.",
+    ],
+    implementationNotes: [
+      "The React frontend is deployed on Vercel at https://cravecraft-three.vercel.app.",
+      "The Node.js and Express API is deployed separately on Render.",
+      "MongoDB is not currently connected. The API falls back to in-memory mode, so order data is not persistent and may reset when the backend restarts.",
+    ],
+    featured: true,
   },
   {
-    slug: "service-booking-portal",
-    title: "Service Booking Portal",
+    slug: "stocksense-ai",
+    title: "StockSense AI",
     description:
-      "A scheduling platform connecting customers with local service providers, with live availability, booking confirmations, and provider dashboards.",
-    tags: ["React", "Node.js", "Express.js", "MongoDB"],
-    gradient: "from-aurora-rose to-aurora-violet",
-    liveUrl: "",
-    repoUrl: "https://github.com/himanshuranjan/service-booking-portal",
-    year: "2024",
-    role: "Solo full-stack developer",
-    overview:
-      "A two-sided scheduling platform: customers browse local service providers and book open slots, while providers manage their availability and bookings from their own dashboard.",
-    challenge:
-      "Avoiding double-bookings when availability updates and booking requests can happen at the same time, and designing a calendar UI that stays clear on mobile where most bookings actually happen.",
-    features: [
-      "Live availability calendar per provider",
-      "Booking confirmation flow with conflict prevention",
-      "Provider dashboard for managing schedule and bookings",
-      "Email confirmations on booking and cancellation",
-    ],
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "date-fns"],
-  },
-    {
-    slug: "community-info-portal",
-    title: "Community Information Portal",
-    description:
-      "A Django-powered hub for local announcements, events, and resources.",
-    tags: ["Django", "Python", "PostgreSQL"],
-    gradient: "from-aurora-indigo to-aurora-violet",
-
-    liveUrl: "",
+      "A responsive stock market platform with live Indian market data, AI-assisted market insights, watchlists, portfolio tracking, and virtual paper trading.",
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "Angel One SmartAPI"],
+    gradient: "from-aurora-indigo to-aurora-cyan",
+    liveUrl: "https://stocksense-ai-delta.vercel.app",
     repoUrl: "",
-
-    year: "2024",
-    role: "Solo Full-Stack Developer",
-
+    year: "2026",
+    role: "Full-Stack Developer",
     overview:
-      "A content hub for local community organizers.",
-
+      "StockSense AI brings stock market information and portfolio simulation into one platform. It integrates Angel One SmartAPI for live market data and provides tools to follow stocks, review a portfolio, and practice trading with virtual funds.",
     challenge:
-      "Built an easy-to-manage CMS with role-based permissions.",
-
+      "The main challenge was bringing market data, portfolio information, and a paper-trading workflow together in a responsive application while keeping simulated trades separate from real broker execution.",
     features: [
-      "Announcements",
-      "Events",
-      "Resources",
-      "Role Based Access",
+      "Live market data integration using Angel One SmartAPI",
+      "Stock market dashboard with stock data and market insights",
+      "Paper trading using virtual funds only, with no real-money trades",
+      "Watchlist to follow selected stocks",
+      "Portfolio tracking for simulated investments",
+      "Responsive interface for desktop and mobile devices",
     ],
-
     techStack: [
-      "Django",
-      "Python",
-      "PostgreSQL",
-      "Bootstrap",
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Angel One SmartAPI",
+      "JWT Authentication",
+      "Recharts",
+      "Lightweight Charts",
     ],
-
-    featured: false,
+    featured: true,
   },
-
-  {
-    slug: "student-feedback-system",
-    title: "Student Feedback System",
-    description:
-      "A Django-based feedback management system where students submit feedback securely.",
-
-    tags: ["Django", "Python", "SQLite"],
-
-    gradient: "from-emerald-500 to-cyan-500",
-
-    liveUrl: "",
-    repoUrl: "",
-
-    year: "2024",
-
-    role: "Solo Full-Stack Developer",
-
-    overview:
-      "A complete feedback management portal.",
-
-    challenge:
-      "Created a secure system for collecting and managing student feedback.",
-
-    features: [
-      "Student Login",
-      "Feedback Submission",
-      "Admin Dashboard",
-      "Feedback Reports",
-      "Responsive Design",
-    ],
-
-    techStack: [
-      "Django",
-      "Python",
-      "SQLite",
-      "Bootstrap",
-    ],
-
-    featured: false,
-  }
-
 ];
 
 export function getProject(slug: string) {

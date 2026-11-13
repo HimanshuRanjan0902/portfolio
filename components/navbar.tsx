@@ -2,27 +2,14 @@
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Menu,
-  X,
-  Github,
-  FileText,
-  Home,
-  User,
-  FolderGit2,
-  Mail,
-  Code2,
-} from "lucide-react";
-
-import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
+import { Menu, X, Github, FileText, Linkedin } from "lucide-react";
 
 const links = [
-  { href: "#top", label: "Home", icon: Home },
-  { href: "#about", label: "About", icon: User },
-  { href: "#skills", label: "Skills", icon: Code2 },
-  { href: "#projects", label: "Projects", icon: FolderGit2 },
-  { href: "#contact", label: "Contact", icon: Mail },
+  { href: "#about", label: "About" },
+  { href: "#services", label: "What I Do" },
+  { href: "#career", label: "Journey" },
+  { href: "#projects", label: "Work" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -31,130 +18,56 @@ export function Navbar() {
   return (
     <>
       <motion.header
-        initial={{ y: -40, opacity: 0 }}
+        initial={{ y: -35, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="fixed top-5 left-1/2 z-50 -translate-x-1/2"
+        transition={{ duration: 0.65 }}
+        className="reference-header fixed inset-x-0 top-0 z-50"
       >
-        <div className="flex items-center rounded-full border border-white/10 bg-zinc-900/70 backdrop-blur-xl shadow-2xl px-6 py-3">
-
-          {/* Logo */}
-          <a
-            href="#top"
-            className="mr-8 whitespace-nowrap text-2xl font-bold"
-          >
-            <span className="text-white">Himanshu</span>
-            <span className="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">
-              .dev
-            </span>
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 lg:px-12">
+          <a href="#top" className="font-display text-xl font-semibold tracking-tight text-white">
+            HR<span className="text-fuchsia-400">.</span>
           </a>
 
-          {/* Desktop Menu */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {links.map((item) => {
-              const Icon = item.icon;
+          <a href="mailto:himanshuranjan2213@gmail.com" className="hidden text-xs tracking-[0.12em] text-zinc-400 transition hover:text-fuchsia-300 md:block">
+            HIMANSHURANJAN2213@GMAIL.COM
+          </a>
 
-              return (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center gap-2 rounded-full px-3 py-2 text-sm text-zinc-300 transition hover:bg-white/10 hover:text-cyan-400"
-                >
-                  <Icon size={16} />
-                  {item.label}
-                </a>
-              );
-            })}
+          <nav className="hidden items-center gap-8 lg:flex">
+            {links.map((link) => (
+              <a key={link.href} href={link.href} className="reference-nav-link">{link.label}</a>
+            ))}
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open resume" className="reference-nav-icon"><FileText size={17} /></a>
+            <a href="https://github.com/HimanshuRanjan0902" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="reference-nav-icon"><Github size={17} /></a>
+            <a href="https://www.linkedin.com/in/himanshu-ranjan3/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="reference-nav-icon"><Linkedin size={17} /></a>
           </nav>
 
-          {/* Right Side */}
-          <div className="ml-6 hidden lg:flex items-center gap-2">
-            <ThemeToggle />
-
-            <a
-              href="https://github.com/HimanshuRanjan0902"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-             <Button variant="ghost" className="h-10 w-10 p-0">
-  <Github className="h-5 w-5" />
-</Button>
-            </a>
-
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="sm">
-                <FileText className="mr-2 h-4 w-4" />
-                Resume
-              </Button>
-            </a>
-          </div>
-
-          {/* Mobile */}
-          <div className="ml-4 flex items-center gap-2 lg:hidden">
-            <ThemeToggle />
-
-            <button
-              onClick={() => setOpen(!open)}
-              className="rounded-full p-2 hover:bg-white/10"
-            >
-              {open ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
+          <button onClick={() => setOpen(!open)} className="rounded-full border border-white/15 p-2 text-white lg:hidden" aria-label={open ? "Close menu" : "Open menu"}>
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </motion.header>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -15 }}
+            initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            className="fixed top-24 left-4 right-4 z-40 rounded-3xl border border-white/10 bg-zinc-900/95 p-6 backdrop-blur-xl lg:hidden"
+            exit={{ opacity: 0, y: -12 }}
+            className="fixed inset-x-4 top-20 z-40 rounded-2xl border border-white/10 bg-[#100d17]/95 p-6 shadow-2xl backdrop-blur-2xl lg:hidden"
           >
-            <div className="flex flex-col gap-3">
-              {links.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="flex items-center gap-3 rounded-xl p-3 text-white hover:bg-white/10"
-                  >
-                    <Icon size={18} />
-                    {item.label}
-                  </a>
-                );
-              })}
-
-              <a
-                href="https://github.com/HimanshuRanjan0902"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="w-full">
-                  <Github className="mr-2 h-4 w-4" />
-                  GitHub
-                </Button>
+            <nav className="flex flex-col gap-1">
+              {links.map((link) => (
+                <a key={link.href} href={link.href} onClick={() => setOpen(false)} className="rounded-xl px-3 py-3 text-sm uppercase tracking-[0.18em] text-zinc-200 hover:bg-white/5 hover:text-fuchsia-300">
+                  {link.label}
+                </a>
+              ))}
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="mt-3 flex items-center gap-2 rounded-xl border border-fuchsia-300/30 px-3 py-3 text-sm text-fuchsia-200">
+                <FileText size={16} /> View Resume
               </a>
-
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="outline" className="w-full">
-                  <FileText className="mr-2 h-4 w-4" />
-                  Resume
-                </Button>
+              <a href="https://www.linkedin.com/in/himanshu-ranjan3/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-xl px-3 py-3 text-sm text-zinc-200 hover:bg-white/5 hover:text-fuchsia-300">
+                <Linkedin size={16} /> LinkedIn
               </a>
-            </div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>

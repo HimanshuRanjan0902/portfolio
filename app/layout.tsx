@@ -19,7 +19,7 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-const siteUrl = "https://himanshuranjan.dev";
+const siteUrl = "https://portfolio-kggy.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Himanshu Ranjan",
   },
   description:
-    "Portfolio of Himanshu Ranjan, a Full Stack Developer specializing in React, Next.js, Node.js, Express.js, MongoDB and Django.",
+    "Portfolio of Himanshu Ranjan, a Full Stack Developer and Computer Science graduate building responsive web applications with React, Node.js, Express.js and MongoDB.",
   keywords: [
     "Himanshu Ranjan",
     "Portfolio",
