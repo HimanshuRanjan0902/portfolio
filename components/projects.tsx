@@ -21,7 +21,7 @@ export function Projects() {
             <ProjectCard key={project.slug} project={project} index={index} />
           ))}
         </div>
-        <a href="https://github.com/HimanshuRanjan0902" target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-zinc-400 transition hover:text-fuchsia-300">
+        <a href="https://github.com/HimanshuRanjan0902" target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-zinc-400 transition hover:text-sky-200">
           More on GitHub <ArrowUpRight size={15} />
         </a>
       </div>

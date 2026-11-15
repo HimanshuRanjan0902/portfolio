@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Himanshu Ranjan",
   },
   description:
-    "Portfolio of Himanshu Ranjan, a Full Stack Developer and Computer Science graduate building responsive web applications with React, Node.js, Express.js and MongoDB.",
+    "Himanshu Ranjan — full-stack developer building thoughtful digital products with React, Next.js, Node.js, TypeScript and MongoDB.",
   keywords: [
     "Himanshu Ranjan",
     "Portfolio",

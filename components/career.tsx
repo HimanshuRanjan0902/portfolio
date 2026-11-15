@@ -31,13 +31,13 @@ export function Career() {
         <h2 className="section-heading mt-5">My Journey <span>&amp; Focus</span></h2>
       </div>
       <div className="relative mx-auto max-w-5xl">
-        <div className="absolute bottom-5 left-[7px] top-5 w-px bg-gradient-to-b from-fuchsia-300 via-violet-500/60 to-transparent md:left-1/2" />
+        <div className="absolute bottom-5 left-[7px] top-5 w-px bg-gradient-to-b from-sky-100 via-violet-500/60 to-transparent md:left-1/2" />
         <div className="space-y-12">
           {milestones.map((item, index) => (
             <motion.article key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.12 }} className={`relative grid gap-4 pl-9 md:grid-cols-2 md:gap-14 md:pl-0 ${index % 2 ? "" : ""}`}>
-              <span className="absolute left-0 top-2 h-4 w-4 rounded-full border-2 border-fuchsia-200 bg-[#0a0810] shadow-[0_0_22px_rgba(232,121,249,0.75)] md:left-1/2 md:-translate-x-1/2" />
+              <span className="absolute left-0 top-2 h-4 w-4 rounded-full border-2 border-sky-200 bg-[#0a0810] shadow-[0_0_22px_rgba(232,121,249,0.75)] md:left-1/2 md:-translate-x-1/2" />
               <div className={`md:text-right ${index % 2 ? "md:col-start-2" : ""}`}>
-                <p className="font-mono text-sm tracking-[0.18em] text-fuchsia-300">{item.date}</p>
+                <p className="font-mono text-sm tracking-[0.18em] text-sky-200">{item.date}</p>
                 <h3 className="mt-3 font-display text-xl font-semibold text-white sm:text-2xl">{item.title}</h3>
                 <p className="mt-2 text-sm text-zinc-400">{item.place}</p>
               </div>

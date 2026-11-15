@@ -44,8 +44,8 @@ export function Services() {
             return (
               <motion.article key={service.number} initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="group bg-[#0c0a11] p-7 transition-colors hover:bg-[#15101d] sm:p-9">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs text-fuchsia-300">{service.number} / 03</span>
-                  <Icon className="text-fuchsia-300 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" size={25} />
+                  <span className="font-mono text-xs text-sky-200">{service.number} / 03</span>
+                  <Icon className="text-sky-200 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" size={25} />
                 </div>
                 <h3 className="mt-14 font-display text-2xl font-semibold tracking-[0.12em] text-white">{service.title}</h3>
                 <p className="mt-5 min-h-24 text-sm leading-7 text-zinc-400">{service.description}</p>

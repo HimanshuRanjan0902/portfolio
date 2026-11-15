@@ -25,11 +25,11 @@ export function Navbar() {
       >
         <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 lg:px-12">
           <a href="#top" className="font-display text-xl font-semibold tracking-tight text-white">
-            HR<span className="text-fuchsia-400">.</span>
+            HR<span className="text-sky-200">.</span>
           </a>
 
-          <a href="mailto:himanshuranjan2213@gmail.com" className="hidden text-xs tracking-[0.12em] text-zinc-400 transition hover:text-fuchsia-300 md:block">
-            HIMANSHURANJAN2213@GMAIL.COM
+          <a href="mailto:himanshuranjan2213@gmail.com" className="hidden text-xs tracking-[0.12em] text-zinc-400 transition hover:text-sky-200 2xl:block">
+            AVAILABLE FOR SELECT OPPORTUNITIES
           </a>
 
           <nav className="hidden items-center gap-8 lg:flex">
@@ -57,14 +57,14 @@ export function Navbar() {
           >
             <nav className="flex flex-col gap-1">
               {links.map((link) => (
-                <a key={link.href} href={link.href} onClick={() => setOpen(false)} className="rounded-xl px-3 py-3 text-sm uppercase tracking-[0.18em] text-zinc-200 hover:bg-white/5 hover:text-fuchsia-300">
+                <a key={link.href} href={link.href} onClick={() => setOpen(false)} className="rounded-xl px-3 py-3 text-sm uppercase tracking-[0.18em] text-zinc-200 hover:bg-white/5 hover:text-sky-200">
                   {link.label}
                 </a>
               ))}
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="mt-3 flex items-center gap-2 rounded-xl border border-fuchsia-300/30 px-3 py-3 text-sm text-fuchsia-200">
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="mt-3 flex items-center gap-2 rounded-xl border border-sky-200/30 px-3 py-3 text-sm text-sky-100">
                 <FileText size={16} /> View Resume
               </a>
-              <a href="https://www.linkedin.com/in/himanshu-ranjan3/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-xl px-3 py-3 text-sm text-zinc-200 hover:bg-white/5 hover:text-fuchsia-300">
+              <a href="https://www.linkedin.com/in/himanshu-ranjan3/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-xl px-3 py-3 text-sm text-zinc-200 hover:bg-white/5 hover:text-sky-200">
                 <Linkedin size={16} /> LinkedIn
               </a>
             </nav>

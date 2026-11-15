@@ -60,10 +60,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               {[["NIFTY 50", "Market index"], ["WATCHLIST", "Track stocks"], ["PAPER TRADE", "Virtual funds"]].map(([name, label]) => <div key={name} className="rounded-lg border border-white/10 bg-white/[0.035] p-2.5 sm:p-3"><p className="text-[8px] tracking-[0.12em] text-zinc-500 sm:text-[9px]">{name}</p><p className="mt-2 text-[10px] text-zinc-200 sm:text-xs">{label}</p></div>)}
             </div>
             <div className="mt-4 rounded-lg border border-white/10 bg-white/[0.025] p-3 sm:p-4">
-              <div className="mb-4 flex items-center justify-between"><span className="text-xs text-zinc-300">Market movement</span><CandlestickChart size={17} className="text-fuchsia-300" /></div>
-              <div className="flex h-24 items-end gap-1.5 sm:h-32">{[28,40,34,53,47,65,58,72,62,82,74,94,80,100,87,110,96,118,108,128,117,138].map((h,i)=><span key={i} className={`flex-1 rounded-t-[2px] ${i%4===0?"bg-violet-300/80":"bg-fuchsia-400/70"}`} style={{height:`${Math.min(h,100)}%`}} />)}</div>
+              <div className="mb-4 flex items-center justify-between"><span className="text-xs text-zinc-300">Market movement</span><CandlestickChart size={17} className="text-sky-200" /></div>
+              <div className="flex h-24 items-end gap-1.5 sm:h-32">{[28,40,34,53,47,65,58,72,62,82,74,94,80,100,87,110,96,118,108,128,117,138].map((h,i)=><span key={i} className={`flex-1 rounded-t-[2px] ${i%4===0?"bg-violet-300/80":"bg-sky-200/70"}`} style={{height:`${Math.min(h,100)}%`}} />)}</div>
             </div>
-            <div className="mt-4 flex flex-wrap gap-2"><span className="inline-flex items-center gap-1 rounded-md bg-violet-400/10 px-2 py-1 text-[9px] text-violet-200"><Eye size={10}/> Watchlist</span><span className="inline-flex items-center gap-1 rounded-md bg-fuchsia-400/10 px-2 py-1 text-[9px] text-fuchsia-200"><Wallet size={10}/> Virtual portfolio</span></div>
+            <div className="mt-4 flex flex-wrap gap-2"><span className="inline-flex items-center gap-1 rounded-md bg-violet-400/10 px-2 py-1 text-[9px] text-sky-100"><Eye size={10}/> Watchlist</span><span className="inline-flex items-center gap-1 rounded-md bg-sky-200/10 px-2 py-1 text-[9px] text-sky-100"><Wallet size={10}/> Virtual portfolio</span></div>
           </div>
         ) : (
           <div className="relative w-full max-w-xl rounded-xl border border-white/10 bg-[#0c1020]/95 p-5 shadow-[0_25px_100px_rgba(0,0,0,.55)] sm:p-7">
@@ -74,7 +74,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.04] p-4">
               <p className="text-xs font-semibold text-white">Create a short link</p>
               <div className="mt-3 rounded-lg border border-white/10 bg-black/20 px-3 py-3 text-[10px] text-zinc-500">https://your-long-url.com/goes-here</div>
-              <div className="mt-3 flex items-center justify-between gap-3"><span className="text-[10px] text-zinc-400">Custom alias · Expiration</span><span className="rounded-md bg-violet-500 px-3 py-2 text-[10px] font-semibold text-white">Shorten URL ↗</span></div>
+              <div className="mt-3 flex items-center justify-between gap-3"><span className="text-[10px] text-zinc-400">Custom alias · Expiration</span><span className="rounded-md bg-sky-500 px-3 py-2 text-[10px] font-semibold text-white">Shorten URL ↗</span></div>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-3"><div className="rounded-lg border border-white/10 bg-white/[0.035] p-3"><p className="text-[9px] text-zinc-500">TOTAL LINKS</p><p className="mt-2 text-2xl font-semibold text-white">12</p></div><div className="rounded-lg border border-white/10 bg-white/[0.035] p-3"><p className="text-[9px] text-zinc-500">TOTAL CLICKS</p><p className="mt-2 text-2xl font-semibold text-white">248</p></div></div>
           </div>
@@ -84,7 +84,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
       <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14">
         <div className="flex items-center gap-3">
-          <span className="font-mono text-xs tracking-[0.2em] text-fuchsia-300">{project.year}</span>
+          <span className="font-mono text-xs tracking-[0.2em] text-sky-200">{project.year}</span>
           <span className="h-px w-8 bg-white/20" />
           <span className="text-xs uppercase tracking-[0.16em] text-zinc-500">{project.role}</span>
         </div>

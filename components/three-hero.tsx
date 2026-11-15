@@ -23,24 +23,21 @@ export function ThreeHero() {
   const [enabled, setEnabled] = React.useState(false);
 
   React.useEffect(() => {
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (!reducedMotion && supportsWebGL()) {
-      setEnabled(true);
-    }
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reducedMotion && supportsWebGL()) setEnabled(true);
   }, []);
 
   if (!enabled) return null;
 
   return (
     <div
-      aria-hidden
-      className="pointer-events-none absolute inset-0 -z-[1] opacity-90 [mask-image:radial-gradient(ellipse_60%_60%_at_50%_40%,black_40%,transparent_100%)]"
+      aria-hidden="true"
+      className="hero-3d-stage pointer-events-none absolute"
     >
       <React.Suspense fallback={null}>
         <CanvasWrapper />
       </React.Suspense>
+      <div className="hero-3d-label">INTERACTIVE STUDY · 01</div>
     </div>
   );
 }

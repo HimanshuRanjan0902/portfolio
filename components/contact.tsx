@@ -24,25 +24,25 @@ export function Contact() {
             <span className="contact-icon"><Mail size={19} /></span>
             <span className="min-w-0 flex-1">
               <span className="block text-xs text-zinc-500">Email</span>
-              <span className="mt-1 block break-all text-sm text-zinc-200 group-hover:text-fuchsia-300">himanshuranjan2213@gmail.com</span>
+              <span className="mt-1 block break-all text-sm text-zinc-200 group-hover:text-sky-200">himanshuranjan2213@gmail.com</span>
             </span>
-            <ArrowUpRight size={17} className="text-zinc-500 transition group-hover:text-fuchsia-300" />
+            <ArrowUpRight size={17} className="text-zinc-500 transition group-hover:text-sky-200" />
           </a>
           <a href="https://github.com/HimanshuRanjan0902" target="_blank" rel="noopener noreferrer" className="contact-row group">
             <span className="contact-icon"><Github size={19} /></span>
             <span className="min-w-0 flex-1">
               <span className="block text-xs text-zinc-500">GitHub</span>
-              <span className="mt-1 block text-sm text-zinc-200 group-hover:text-fuchsia-300">HimanshuRanjan0902</span>
+              <span className="mt-1 block text-sm text-zinc-200 group-hover:text-sky-200">HimanshuRanjan0902</span>
             </span>
-            <ArrowUpRight size={17} className="text-zinc-500 transition group-hover:text-fuchsia-300" />
+            <ArrowUpRight size={17} className="text-zinc-500 transition group-hover:text-sky-200" />
           </a>
           <a href="https://www.linkedin.com/in/himanshu-ranjan3/" target="_blank" rel="noopener noreferrer" className="contact-row group">
             <span className="contact-icon"><Linkedin size={19} /></span>
             <span className="min-w-0 flex-1">
               <span className="block text-xs text-zinc-500">LinkedIn</span>
-              <span className="mt-1 block text-sm text-zinc-200 group-hover:text-fuchsia-300">himanshu-ranjan3</span>
+              <span className="mt-1 block text-sm text-zinc-200 group-hover:text-sky-200">himanshu-ranjan3</span>
             </span>
-            <ArrowUpRight size={17} className="text-zinc-500 transition group-hover:text-fuchsia-300" />
+            <ArrowUpRight size={17} className="text-zinc-500 transition group-hover:text-sky-200" />
           </a>
           <div className="mt-8 border-t border-white/10 pt-6">
             <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">Currently</p>
